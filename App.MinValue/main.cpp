@@ -34,18 +34,13 @@ int main()
 	{
 		cout << arr[i] << endl;
 	}
-
-	for (int i = 0; i < size - 1; i++)
+	int minValue = arr[0];
+	for (int i = 1; i < size; i++)
 	{
-		for (int j = i + 1; j < size; j++)
+		if (arr[i] < minValue)
 		{
-			if (arr[i] > arr[j])
-			{
-				ebota = arr[i];
-				arr[i] = arr[j];
-				arr[j] = ebota;
-			}
+			minValue = arr[i];
 		}
 	}
-	cout << endl << "Min: " << arr[0];
+	cout << endl << "Min: " << minValue;
 }
